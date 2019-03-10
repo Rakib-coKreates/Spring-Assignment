@@ -24,5 +24,16 @@ private FortuneService fortuneService;
 		
 		return "Just Do It:" + fortuneService.getFortune();
 	}
-
+//add an init method
+	public void doMystartupStuff() {
+		System.out.println("TrackCoach:inside method doMyStartupStuff");
+	}
+	
+	//add an destroy method
+	public void doMyCleanupStuffYoYo() {
+		System.out.println("TrackCoach:inside method doMyCleanupStuffYoYo");
+	}
+	
+	
+	
 }
