@@ -3,26 +3,20 @@ package com.assignment.springdemo;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Scope;
+
 import org.springframework.stereotype.Component;
 
 @Component
+
 public class TennisCoach implements Coach {
 
-	
-	@Autowired 
-	@Qualifier("randomFortuneService")
+
 	private FortuneService fortuneService;
 	
-	//define a default constructor
-	public TennisCoach() {
-		System.out.println(">> tennisCoach: inside default constructor");
+	public TennisCoach(FortuneService fortuneService) {
+		this.fortuneService = fortuneService;
 	}
-	
 
-	
 	//define my init method
 	@PostConstruct
 	public void doMyStartupStuff() {

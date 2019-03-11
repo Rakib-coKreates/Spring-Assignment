@@ -12,7 +12,7 @@
     <!-- define the dependency -->
     <bean id="myFortuneService"
     		class="com.assignment.springdemo.HappyFortuneService">
-    	</bean>
+    </bean>
     
  	<bean id="myCoach"
  		class="com.assignment.springdemo.TrackCoach"
